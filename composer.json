@@ -22,6 +22,7 @@
     "born05/craft-twofactorauthentication": "^2.1.2",
     "craftcms/cms": "^3.1.21",
     "craftcms/contact-form": "^2.2.4",
+    "craftcms/element-api": "^2.5.4",
     "craftcms/redactor": "^2.3.2",
     "ether/seo": "^3.5.4",
     "dgrigg/craft-migration-assistant": "^3.1.0",
