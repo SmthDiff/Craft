@@ -1,0 +1,8 @@
+/.docker/*/data
+/.docker/*/logs
+/.env
+/.idea
+/config/license.key
+/node_modules
+/vendor
+.DS_Store

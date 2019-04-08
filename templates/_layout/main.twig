@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ currentSite.language }}">
+{{ include('_layout/head.twig') }}
+<body class="">
+<div id="wrapper">
+    {{ include('_layout/header/header.twig') }}
+    <div id="content" class="site-content" tabindex="-1">
+        <div id="primary" class="content-area">
+            <main id="main" class="site-main">
+                {% block content %}
+                {% endblock %}
+            </main>
+        </div>
+    </div>
+    {{ include('_layout/footer/footer.twig') }}
+</div>
+{{ include('_layout/foot/scripts.twig') }}
+</body>
+</html>

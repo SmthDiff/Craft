@@ -1,0 +1,62 @@
+{
+  "name": "smthdiff/craft",
+  "description": "Craft CMS made for Devs",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "project"
+  ],
+  "license": "MIT",
+  "homepage": "https://craftcms.com/",
+  "type": "project",
+  "support": {
+    "email": "support@craftcms.com",
+    "issues": "https://github.com/craftcms/cms/issues",
+    "forum": "https://craftcms.stackexchange.com/",
+    "source": "https://github.com/craftcms/cms",
+    "docs": "https://craftcms.com/docs",
+    "rss": "https://craftcms.com/changelog.rss"
+  },
+  "require": {
+    "born05/craft-twofactorauthentication": "^2.1.2",
+    "craftcms/cms": "^3.1.21",
+    "craftcms/contact-form": "^2.2.4",
+    "craftcms/redactor": "^2.3.2",
+    "ether/seo": "^3.5.4",
+    "dgrigg/craft-migration-assistant": "^3.1.0",
+    "lukeyouell/craft-queue-manager": "^1.1.0",
+    "lukeyouell/craft-updatechecker": "^1.2.0",
+    "matt-west/craft-recaptcha": "^1.3.0",
+    "misterbk/mix": "^1.5.2",
+    "nystudio107/craft-minify": "^1.2.9",
+    "rias/craft-colour-swatches": "^1.2.2",
+    "rias/craft-contact-form-extensions": "^1.1.4",
+    "verbb/field-manager": "^2.0.5",
+    "vlucas/phpdotenv": "^2.4.0",
+    "wrav/oembed": "^1.1.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "modules\\": "modules/"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "7.2"
+    }
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "@php -r \"copy('.env.example', '.env');\"",
+      "@php -r \"unlink('composer.json');\"",
+      "@php -r \"unlink('LICENSE.md');\"",
+      "@php -r \"unlink('README.md');\"",
+      "@php -r \"rename('composer.json.default', 'composer.json');\"",
+      "@composer dump-autoload -o",
+      "@php craft setup/welcome"
+    ]
+  }
+}
