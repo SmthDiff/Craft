@@ -13,6 +13,7 @@ Learn more about Craft at [craftcms.com](https://craftcms.com).
 * Run `composer install`
 * Run `yarn` (or `npm install`)
 * Run `yarn run dev` (or `npm run dev`)
+* Run `php craft setup/security-key`
 * Go to [the install page](http://localhost/admin/install): `/admin/install`
   * Alternatively run `php craft install`
 * Login to the [Control Panel](http://localhost/admin): `/admin`
