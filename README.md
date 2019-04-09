@@ -15,7 +15,7 @@ Learn more about Craft at [craftcms.com](https://craftcms.com).
 * Run `yarn run dev` (or `npm run dev`)
 * Run `php craft setup/security-key`
 * Go to [the install page](http://localhost/admin/install): `/admin/install`
-  * Alternatively run `php craft install`
+	* Alternatively run `php craft install`
 * Login to the [Control Panel](http://localhost/admin): `/admin`
 * Activate wanted [Plugins](http://localhost/admin/settings/plugins): `/admin/settings/plugins`
 
@@ -36,3 +36,9 @@ For more information see the Craft 3 documentation for [installation](https://do
 - [Envato Tuts+](https://webdesign.tutsplus.com/categories/craft-cms/courses) – Video courses
 - [Straight Up Craft](http://straightupcraft.com/) – Articles, tutorials, and more
 - [pluginfactory.io](https://pluginfactory.io/) – Craft plugin scaffold generator
+
+
+## Troubleshooting
+
+* Error storage / config / cpresources doesn't have the correct permissions:
+	* (sudo) chmod -R 777 config storage public/cpresources
