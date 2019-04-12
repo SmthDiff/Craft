@@ -1,4 +1,5 @@
 let mix = require('laravel-mix');
+var tailwindcss = require('tailwindcss');
 
 /*
  |--------------------------------------------------------------------------
@@ -18,6 +19,10 @@ mix
   .copyDirectory('assets/img', 'public/assets/img')
   .copyDirectory('assets/icons', 'public/assets/icons')
   .sass('assets/scss/app.scss', 'public/assets/css')
+  .options({
+    processCssUrls: false,
+    postCss: [ tailwindcss('./tailwind.js') ],
+  })
   .autoload({
     'jquery': ['$', 'jQuery', 'window.$', 'window.jQuery'],
   })

@@ -1,2 +1,4 @@
 @import "~font-awesome/scss/font-awesome";
-@import "~bootstrap/scss/bootstrap";
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;

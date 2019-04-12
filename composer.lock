@@ -523,16 +523,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.1.21.1",
+            "version": "3.1.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "f2ef5da6693a3aa89bd2585b3a8c366ee5d7ab70"
+                "reference": "868202831139e51b9d60d9738147ac9635bc760c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/f2ef5da6693a3aa89bd2585b3a8c366ee5d7ab70",
-                "reference": "f2ef5da6693a3aa89bd2585b3a8c366ee5d7ab70",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/868202831139e51b9d60d9738147ac9635bc760c",
+                "reference": "868202831139e51b9d60d9738147ac9635bc760c",
                 "shasum": ""
             },
             "require": {
@@ -607,7 +607,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2019-04-04T19:07:09+00:00"
+            "time": "2019-04-10T17:10:47+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -1609,16 +1609,16 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v5.8.9",
+            "version": "v5.8.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "7224ed316427ae5f67c4888679bbf7f6e7773660"
+                "reference": "384b4daa2c738455f249c7f6f368197a5118ec43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/7224ed316427ae5f67c4888679bbf7f6e7773660",
-                "reference": "7224ed316427ae5f67c4888679bbf7f6e7773660",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/384b4daa2c738455f249c7f6f368197a5118ec43",
+                "reference": "384b4daa2c738455f249c7f6f368197a5118ec43",
                 "shasum": ""
             },
             "require": {
@@ -1649,20 +1649,20 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "time": "2019-03-06T19:39:19+00:00"
+            "time": "2019-04-03T08:58:07+00:00"
         },
         {
             "name": "illuminate/support",
-            "version": "v5.8.9",
+            "version": "v5.8.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "e275519c58246cc4011c798f9b0a0f83aae2aab7"
+                "reference": "601ca709bb612482848a9f330aa66490b5d85fef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/e275519c58246cc4011c798f9b0a0f83aae2aab7",
-                "reference": "e275519c58246cc4011c798f9b0a0f83aae2aab7",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/601ca709bb612482848a9f330aa66490b5d85fef",
+                "reference": "601ca709bb612482848a9f330aa66490b5d85fef",
                 "shasum": ""
             },
             "require": {
@@ -1710,7 +1710,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2019-04-01T19:02:05+00:00"
+            "time": "2019-04-08T12:54:41+00:00"
         },
         {
             "name": "intervention/httpauth",

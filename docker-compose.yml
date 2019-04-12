@@ -1,20 +1,35 @@
 version: "3"
 services:
-  app:
-    image: premiummedia/php:${PHP_VERSION}
+  nginx:
+    image: rstadler333/nginx:latest
+    restart: always
+    working_dir: /var/www/html
+    depends_on:
+      - apache
+    volumes:
+      - './:/var/www/html'
+    ports:
+      - '${NGINX_PORT_HOST}:80'
+  apache:
+    image: rstadler333/apache:latest
+    restart: always
+    working_dir: /var/www/html
+    depends_on:
+      - php
+    volumes:
+      - './:/var/www/html'
+  php:
+    image: rstadler333/php:latest
     restart: always
     working_dir: /var/www/html
     depends_on:
       - mysql
+      - mailhog
     volumes:
       - './:/var/www/html'
-      - './.docker/php/config/conf/general.ini:/usr/local/etc/php/conf.d/general.ini'
-      - './.docker/php/config/conf/opcache.ini:/usr/local/etc/php/conf.d/opcache.ini'
-      - './.docker/php/config/conf/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini'
-      - './.docker/php/logs/php:/tmp/log/php'
-      - './.docker/php/logs/xdebug:/tmp/log/xdebug'
-    ports:
-      - '${APACHE_PORT_HOST}:80'
+      - '.docker/php/config/conf/general.ini:/etc/php/7.2/fpm/conf.d/99-general.ini'
+      - '.docker/php/config/conf/opcache.ini:/etc/php/7.2/fpm/conf.d/99-opcache.ini'
+      - '.docker/php/config/conf/xdebug.ini:/etc/php/7.2/fpm/conf.d/99-xdebug.ini'
   mysql:
     image: mysql:${MYSQL_VERSION}
     restart: always
@@ -27,6 +42,16 @@ services:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+  node:
+    image: node:${NODE_VERSION}
+    user: "node"
+    restart: always
+    working_dir: /app
+    environment:
+      - NODE_ENV=${NODE_ENV}
+    volumes:
+      - './:/app'
+    command: ["sh", "-c", "yarn && yarn run watch"]
   mailhog:
     image: mailhog/mailhog
     restart: always
