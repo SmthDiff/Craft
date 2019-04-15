@@ -42,3 +42,5 @@ For more information see the Craft 3 documentation for [installation](https://do
 
 * Error storage / config / cpresources doesn't have the correct permissions:
 	* (sudo) chmod -R 777 config storage public/cpresources
+* Changes aren't automatically reflected:
+	* The PHP Docker Container has a config file in `.docker/php/config/conf/opcache.ini` change `opcache.validate_timestamps` to 1
