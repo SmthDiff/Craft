@@ -2,59 +2,74 @@ version: "3"
 services:
   nginx:
     image: rstadler333/nginx:latest
-    restart: always
-    working_dir: /var/www/html
+    restart: "always"
+    working_dir: ${PROJECT_ROOT}
     depends_on:
       - apache
-    volumes:
-      - './:/var/www/html'
     ports:
-      - '${NGINX_PORT_HOST}:80'
+      - "${NGINX_PORT_HOST}:${NGINX_PORT_HOST}"
+    volumes:
+      - ./:${PROJECT_ROOT}
+      - ".docker/nginx/config/site.conf:/etc/nginx/sites-available/site.conf"
+    environment:
+      - DOC_ROOT=${DOC_ROOT}
+      - NGINX_PORT_HOST=${NGINX_PORT_HOST}
+    command: /bin/bash -c "envsubst '$$DOC_ROOT,$$NGINX_PORT_HOST' < /etc/nginx/sites-available/site.conf > /etc/nginx/sites-enabled/apache && nginx -g 'daemon off;'"
   apache:
     image: rstadler333/apache:latest
-    restart: always
-    working_dir: /var/www/html
+    restart: "always"
+    working_dir: ${PROJECT_ROOT}
     depends_on:
       - php
+#    ports:
+#      - "${APACHE_PORT_HOST}:7080"
     volumes:
-      - './:/var/www/html'
+      - ./:${PROJECT_ROOT}
+      - ".docker/apache/config/site.conf:/etc/apache2/sites-available/001-default.conf"
+    environment:
+      - PROJECT_ROOT=${PROJECT_ROOT}
+      - DOC_ROOT=${DOC_ROOT}
   php:
     image: rstadler333/php:latest
-    restart: always
-    working_dir: /var/www/html
+    restart: "always"
+    working_dir: ${PROJECT_ROOT}
     depends_on:
       - mysql
       - mailhog
     volumes:
-      - './:/var/www/html'
-      - '.docker/php/config/conf/general.ini:/etc/php/7.2/fpm/conf.d/99-general.ini'
-      - '.docker/php/config/conf/opcache.ini:/etc/php/7.2/fpm/conf.d/99-opcache.ini'
-      - '.docker/php/config/conf/xdebug.ini:/etc/php/7.2/fpm/conf.d/99-xdebug.ini'
+      - ./:${PROJECT_ROOT}
+      - ".docker/php/config/conf/general.ini:/etc/php/7.2/fpm/conf.d/99-general.ini"
+      - ".docker/php/config/conf/opcache.ini:/etc/php/7.2/fpm/conf.d/99-opcache.ini"
+      - ".docker/php/config/conf/xdebug.ini:/etc/php/7.2/fpm/conf.d/99-xdebug.ini"
+    environment:
+      - PHP_DEVELOPMENT=${PHP_DEVELOPMENT}
+      - PHP_XDEBUG_KEY=${PHP_XDEBUG_KEY}
   mysql:
     image: mysql:${MYSQL_VERSION}
-    restart: always
+    restart: "always"
     ports:
-      - '${MYSQL_PORT_HOST}:3306'
+      - "${MYSQL_PORT_HOST}:3306"
     volumes:
-      - .docker/mysql/data:/var/lib/mysql
+      - ".docker/mysql/data:/var/lib/mysql"
     environment:
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-  node:
-    image: node:${NODE_VERSION}
-    user: "node"
-    restart: always
-    working_dir: /app
-    environment:
-      - NODE_ENV=${NODE_ENV}
-    volumes:
-      - './:/app'
-    command: ["sh", "-c", "yarn && yarn run watch"]
+    command: ["mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
+#  node:
+#    image: node:${NODE_VERSION}
+#    user: "node"
+#    restart: "always"
+#    working_dir: "/app"
+#    environment:
+#      - NODE_ENV=${NODE_ENV}
+#    volumes:
+#      - "./:/app"
+#    command: ["sh", "-c", "yarn && yarn run watch"]
   mailhog:
     image: mailhog/mailhog
-    restart: always
+    restart: "always"
     ports:
       - "${MAILHOG_SMTP_PORT_HOST}:1025"
       - "${MAILHOG_WEB_PORT_HOST}:8025"
