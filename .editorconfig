@@ -1,3 +1,4 @@
+# http://editorconfig.org
 root = true
 
 [*]
@@ -6,6 +7,16 @@ indent_size = 2
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+# https://github.com/pixelandtonic/CodingStandards
+[*.php]
+indent_style = tab
+indent_size = tab
+tab_width = 4
 end_of_line = lf
-# editorconfig-tools is unable to ignore longs strings or urls
-max_line_length = null
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true

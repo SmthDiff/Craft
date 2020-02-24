@@ -21,7 +21,7 @@ mix
   .sass('assets/scss/app.scss', 'public/assets/css')
   .options({
     processCssUrls: false,
-    postCss: [ tailwindcss('./tailwind.config.js') ],
+    postCss: [tailwindcss('./tailwind.config.js')],
   })
   .autoload({
     'jquery': ['$', 'jQuery', 'window.$', 'window.jQuery'],

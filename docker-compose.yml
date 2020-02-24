@@ -30,7 +30,7 @@ services:
       - PROJECT_ROOT=${PROJECT_ROOT}
       - DOC_ROOT=${DOC_ROOT}
   php:
-    image: rstadler333/php:latest
+    image: rstadler333/php:${PHP_VERSION}
     restart: "always"
     working_dir: ${PROJECT_ROOT}
     depends_on:
