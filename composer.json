@@ -48,8 +48,6 @@
   "scripts": {
     "post-create-project-cmd": [
       "@php -r \"copy('.env.example', '.env');\"",
-      "@php -r \"unlink('LICENSE.md');\"",
-      "@php -r \"unlink('README.md');\"",
       "@composer dump-autoload -o",
       "@php craft setup/welcome"
     ],
