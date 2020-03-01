@@ -19,6 +19,7 @@
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
+    "born05/craft-sentry": "^1.0",
     "born05/craft-twofactorauthentication": "^2.1.2",
     "craftcms/cms": "^3.4",
     "craftcms/element-api": "^2.5.4",
