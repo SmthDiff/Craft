@@ -7,7 +7,7 @@
     "craftcms",
     "project"
   ],
-  "license": "MIT",
+  "license": "Unlicense",
   "homepage": "https://craftcms.com/",
   "type": "project",
   "support": {
@@ -21,7 +21,7 @@
   "require": {
     "born05/craft-sentry": "^1.0",
     "born05/craft-twofactorauthentication": "^2.1.2",
-    "craftcms/cms": "^3.4",
+    "craftcms/cms": "^3.4.0",
     "craftcms/element-api": "^2.5.4",
     "craftcms/redactor": "^2.3.2",
     "ether/seo": "^3.5.4",
@@ -32,6 +32,9 @@
     "vlucas/phpdotenv": "^3.4.0",
     "wrav/oembed": "^1.1.4",
     "xpertbot/craft-wheelform": "^2.3"
+  },
+  "require-dev": {
+    "yiisoft/yii2-shell": "^2.0.3"
   },
   "autoload": {
     "psr-4": {
