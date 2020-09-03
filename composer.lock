@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "59a9364eb8b9054eff5403243b0c0bac",
+    "content-hash": "a2d60e7165760d163bc9f1a688474362",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -3178,6 +3178,58 @@
                 "random"
             ],
             "time": "2018-07-02T15:55:56+00:00"
+        },
+        {
+            "name": "percipioglobal/craft-colour-swatches",
+            "version": "1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/percipioglobal/craft-colour-swatches.git",
+                "reference": "b4711d55220085b6123b94ee8909c82cdfb23430"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/percipioglobal/craft-colour-swatches/zipball/b4711d55220085b6123b94ee8909c82cdfb23430",
+                "reference": "b4711d55220085b6123b94ee8909c82cdfb23430",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Colour Swatches",
+                "handle": "colour-swatches",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/percipioglobal/craft-colour-swatches/master/CHANGELOG.md",
+                "class": "percipioglobal\\colourswatches\\ColourSwatches"
+            },
+            "autoload": {
+                "psr-4": {
+                    "percipioglobal\\colourswatches\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Percipio Global",
+                    "homepage": "https://percipio.london"
+                }
+            ],
+            "description": "Let clients choose from a predefined set of colours.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "colour-swatches",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "time": "2020-08-19T06:04:26+00:00"
         },
         {
             "name": "php-http/client-common",
