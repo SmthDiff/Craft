@@ -1,27 +1,28 @@
 <?php
-/**
- * Copyright (c) 2019 Rodrigo Stadler <rstadler@smthdiff.com>. All rights reserved.
- * See LICENSE.txt for license details.
- */
 
 return [
-	'verifyFrontEnd' => false,
-	'forceFrontEnd' => false,
-	'forceBackEnd' => false,
+	'*' => [
+		// Allow a totp delay in seconds (gives the user some extra time after code expired)
+		'totpDelay' => null,
 
-	// The URI we should use for 2FA ligin verification on the front-end.
-	'verifyPath' => '',
+		'verifyFrontEnd' => false,
+		'verifyBackEnd' => true,
 
-	// The URI we should use for 2FA settings (turning it on and off) on the front-end.
-	'settingsPath' => '',
+		'forceFrontEnd' => false,
+		'forceBackEnd' => false,
 
-	// Choose between using the whitelist or blacklist! Using both will block everything!
-	// Whitelist paths that do not need 2FA. Exact path or regex.
-	'frontEndPathWhitelist' => [
-		'*' => [],
-	],
-	// Blacklist paths that do need 2FA. Exact path or regex.
-	'frontEndPathBlacklist' => [
-		'*' => [],
+		// The URI we should use for 2FA ligin verification on the front-end.
+		'verifyPath' => '',
+
+		// The URI we should use for 2FA settings (turning it on and off) on the front-end.
+		'settingsPath' => '',
+
+		// Choose between using the accept or exclude! Using both will block everything!
+		// Allow paths that do not need 2FA. Exact path or regex. No leading slashes.
+		'frontEndPathAllow' => [
+		],
+		// Exclude paths that do need 2FA. Exact path or regex. No leading slashes.
+		'frontEndPathExclude' => [
+		],
 	],
 ];

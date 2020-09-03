@@ -1,5 +1,4 @@
 <?php
-
 namespace modules;
 
 use Craft;
