@@ -4,5 +4,6 @@
 /.idea
 /config/license.key
 /node_modules
+/packages
 /vendor
 .DS_Store

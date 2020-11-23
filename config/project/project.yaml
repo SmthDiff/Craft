@@ -1,0 +1,95 @@
+dateModified: 1606160158
+email:
+  fromEmail: webmaster@smthdiff.com
+  fromName: 'Craft Template'
+  transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  blitz-recommendations:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  colorit:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.3
+  colour-swatches:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.4.0
+  element-api:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  encore:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      assetPath: build
+      publicPath: web
+  fetch:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  google-tag-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.1.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  oembed:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  sentry-sdk:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.1.1
+  two-factor-authentication:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.7.2
+  update-checker:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      accessKey: ''
+      email: '1'
+      slack: ''
+      slackWebhook: ''
+      toEmail: ''
+  webhooks:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  wheelform:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+system:
+  edition: solo
+  live: true
+  name: 'Craft Template'
+  schemaVersion: 3.5.13
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
