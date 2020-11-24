@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ currentSite.language }}">
 {{ include('_layout/head.twig') }}
-<body class="">
-<div class="min-h-screen bg-white">
-  {{ include('_layout/menu/menu.twig') }}
+<body>
+<div id="app">
+  <main-menu></main-menu>
+  {{ include('_layout/header/header.twig') }}
   {% block content %}
   {% endblock %}
   {{ include('_layout/footer/footer.twig') }}

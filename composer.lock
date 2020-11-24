@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c987db204e394e6a91570becb37ef9bf",
+    "content-hash": "63ac99c9b9f247fe7a18c17281980408",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -4967,10 +4967,16 @@
         {
             "name": "smthdiff/craft-encore",
             "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SmthDiff/craft-encore.git",
+                "reference": "cd3c9636687bf6291a0aa45ea308267414683682"
+            },
             "dist": {
-                "type": "path",
-                "url": "./packages/craft-encore",
-                "reference": "adc21aa1572714a14db891098cd1f0a4f49536fb"
+                "type": "zip",
+                "url": "https://api.github.com/repos/SmthDiff/craft-encore/zipball/cd3c9636687bf6291a0aa45ea308267414683682",
+                "reference": "cd3c9636687bf6291a0aa45ea308267414683682",
+                "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^3.0.0"
@@ -4996,6 +5002,7 @@
                     "SmthDiff\\Encore\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5008,16 +5015,18 @@
             ],
             "description": "Helper plugin for Webpack Encode in Craft CMS templates",
             "keywords": [
-                "craft",
+                "Craft",
                 "craft-plugin",
                 "craft3",
                 "craftcms",
                 "webpack",
                 "webpack-encore"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/SmthDiff/craft-encore/issues",
+                "source": "https://github.com/SmthDiff/craft-encore/tree/1.0.0"
+            },
+            "time": "2020-11-24T18:22:08+00:00"
         },
         {
             "name": "spomky-labs/otphp",

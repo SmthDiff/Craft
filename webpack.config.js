@@ -11,6 +11,7 @@ Encore
 
   // Assets
   .addStyleEntry('styles', './assets/css/app.css')
+  //.addEntry('scripts', './assets/js/app.js')
   .addEntry('scripts', './assets/ts/app.ts')
   .copyFiles({
     from: './assets/img',
@@ -35,6 +36,8 @@ Encore
     config.corejs = 3;
   })
 
+  // Add Vue
+  .enableVueLoader()
   // Add TypeScript
   .enableTypeScriptLoader()
   // Add PostCSS
