@@ -1,4 +1,4 @@
-dateModified: 1606160158
+dateModified: 1610746488
 email:
   fromEmail: webmaster@smthdiff.com
   fromName: 'Craft Template'
@@ -15,7 +15,7 @@ plugins:
   colour-swatches:
     edition: standard
     enabled: true
-    schemaVersion: 1.4.0
+    schemaVersion: 1.4.1.1
   element-api:
     edition: standard
     enabled: true
@@ -35,10 +35,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  google-tag-manager:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.1.0
   minify:
     edition: standard
     enabled: true
