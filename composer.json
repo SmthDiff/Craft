@@ -21,7 +21,7 @@
   "require": {
     "born05/craft-sentry": "^1.0",
     "born05/craft-twofactorauthentication": "^2.1.2",
-    "craftcms/cms": "^3.4.25",
+    "craftcms/cms": "^3.6.0",
     "craftcms/element-api": "^2.5.4",
     "craftcms/redactor": "^2.3.2",
     "craftcms/webhooks": "^2.3",
@@ -49,14 +49,13 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.2"
+      "php": "7.2.5"
     }
   },
   "scripts": {
     "post-create-project-cmd": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-      "@composer dump-autoload -o",
-      "@php craft setup/welcome"
+      "@composer dump-autoload -o"
     ],
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
